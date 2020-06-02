@@ -1,0 +1,105 @@
+// Colors
+// Primary
+$primaryColor: hsl(180, 29%, 50%); //Desaturated Dark Cyan
+//Neutral
+$light-grayish-cyan: hsl(180, 52%, 96%); //Light Grayish Cyan (Background):
+$light-grayish-cyan: hsl(180, 31%, 95%); //(Filter Tablets)
+$dark-grayish-cyan: hsl(180, 8%, 52%);
+$very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+//Font-family
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: $light-grayish-cyan;
+
+  font-family: 'Lato', Helvetica, sans-serif;
+
+  .container {
+    .hero-banner {
+      img {
+        width: 100vw;
+      }
+    }
+    .job-posting {
+      display: flex;
+      margin: 4rem 6rem -2rem 6rem;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      border-left: 4px solid $primaryColor;
+      background-color: #fff;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      &__logo-wrapper {
+        flex-shrink: 0;
+      }
+      &__logo {
+        height: 3rem;
+        width: 3rem;
+      }
+      &__content {
+        margin: 0;
+      }
+      &__title {
+        margin-top: -10px;
+        margin-left: 22px;
+        padding: 0;
+        color: #1a202c;
+        font-size: 1.25rem;
+      }
+      &__message {
+        margin-top: -15px;
+        margin-left: 22px;
+        color: #718096;
+        font-size: 1rem;
+      }
+      &__badges {
+        display: flex;
+        margin-left: 1.5rem;
+        height: 60px;
+        margin-top: -10px;
+      }
+      &__company-title {
+        margin-right: 1rem;
+        color: $primaryColor;
+        font-weight: bold;
+      }
+      &__badge-green {
+        color: white;
+        padding: 5px;
+        border-radius: 15px;
+        background-color: $primaryColor;
+      }
+      &__badge-black {
+        color: white;
+        padding: 4px 15px;
+        border-radius: 15px;
+        background-color: #333;
+      }
+      &__tags {
+        padding: 0;
+        margin-bottom: 3.5rem;
+        margin-left: 5rem;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+      }
+      &__item {
+        background: $light-grayish-cyan;
+        padding: 5px;
+        margin: 5px;
+        color: $primaryColor;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+}

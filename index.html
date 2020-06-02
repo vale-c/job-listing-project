@@ -1,193 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
   <title>Frontend Mentor | Job Listings</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-  <!-- Item Start -->
-  Photosnap
-  New!
-  Featured
-  Senior Frontend Developer
-  1d ago
-  Full Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Senior
-  <!-- Languages -->
-  HTML
-  CSS
-  JavaScript
-  <!-- Item End -->
+  <div class="container">
+    <div class="hero-banner">
+      <img src="/images/bg-header-desktop.svg" alt="bg-header">
+    </div>
 
-  <!-- Item Start -->
-  Manage
-  New!
-  Featured
-  Fullstack Developer
-  1d ago
-  Part Time
-  Remote
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  Python
-  <!-- Tools -->
-  React
-  <!-- Item End -->
+    <div class="job-posting">
+      <div class="job-posting__logo-wrapper">
+        <img class="company-logo" src="/images/photosnap.svg" alt="company-logo" />
+      </div>
 
-  <!-- Item Start -->
-  Account
-  New!
-  Junior Frontend Developer
-  2d ago
-  Part Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  JavaScript
-  <!-- Tools -->
-  React
-  Sass
-  <!-- Item End -->
+      <div class="job-posting__content">
+        <div class="job-posting__badges">
+          <p class="job-posting__company-title">Photosnap</p>
+          <p class="job-posting__badge-green">New!</p>
+          <p class="job-posting__badge-black">Featured</p>
+        </div>
 
-  <!-- Item Start -->
-  MyHome
-  Junior Frontend Developer
-  5d ago
-  Contract
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  CSS
-  JavaScript
-  <!-- Item End -->
+        <h4 class="job-posting__title">Senior Front-end Developer</h4>
+        <p class="job-posting__message">1 day ago • Full-time • USA only</p>
+      </div>
+      <ul class="job-posting__tags">
+        <li class="job-posting__item">Frontend</li>
+        <li class="job-posting__item">Senior</li>
+        <li class="job-posting__item">HTML</li>
+        <li class="job-posting__item">CSS</li>
+        <li class="job-posting__item">JavaScript</li>
+      </ul>
+    </div>
 
-  <!-- Item Start -->
-  Loop Studios
-  Software Engineer
-  1w ago
-  Full Time
-  Worldwide
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  JavaScript
-  Ruby
-  <!-- Tools -->
-  Sass
-  <!-- Item End -->
+    <div class="job-posting">
+      <div class="job-posting__logo-wrapper">
+        <img class="company-logo" src="/images/manage.svg" alt="company-logo" />
+      </div>
 
-  <!-- Item Start -->
-  FaceIt
-  Junior Backend Developer
-  2w ago
-  Full Time
-  UK only
-  <!-- Role -->
-  Backend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  Ruby
-  <!-- Tools -->
-  RoR
-  <!-- Item End -->
+      <div class="job-posting__content">
+        <div class="job-posting__badges">
+          <p class="job-posting__company-title">Manage</p>
+          <p class="job-posting__badge-green">New!</p>
+          <p class="job-posting__badge-black">Featured</p>
+        </div>
 
-  <!-- Item Start -->
-  Shortly
-  Junior Developer
-  2w ago
-  Full Time
-  Worldwide
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  HTML
-  JavaScript
-  <!-- Tools -->
-  Sass
-  <!-- Item End -->
+        <h4 class="job-posting__title">Fullstack Developer</h4>
+        <p class="job-posting__message">1 day ago • Part Time • Remote</p>
+      </div>
+      <ul class="job-posting__tags">
+        <li class="job-posting__item">Fullstack</li>
+        <li class="job-posting__item">Midweight</li>
+        <li class="job-posting__item">Python</li>
+        <li class="job-posting__item">React</li>
+      </ul>
+    </div>
 
-  <!-- Item Start -->
-  Insure
-  Junior Frontend Developer
-  2w ago
-  Full Time
-  USA only
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  JavaScript
-  <!-- Tools -->
-  Vue
-  Sass
-  <!-- Item End -->
+    <div class="job-posting">
+      <div class="job-posting__logo-wrapper">
+        <img class="company-logo" src="/images/account.svg" alt="company-logo" />
+      </div>
 
-  <!-- Item Start -->
-  Eyecam Co.
-  Full Stack Engineer
-  3w ago
-  Full Time
-  Worldwide
-  <!-- Role -->
-  Fullstack
-  <!-- Level -->
-  Midweight
-  <!-- Languages -->
-  JavaScript
-  Python
-  <!-- Tools -->
-  Django
-  <!-- Item End -->
+      <div class="job-posting__content">
+        <div class="job-posting__badges">
+          <p class="job-posting__company-title">Account</p>
+          <p class="job-posting__badge-green">New!</p>
+          <p class="job-posting__badge-black">Featured</p>
+        </div>
 
-  <!-- Item Start -->
-  The Air Filter Company
-  Front-end Dev
-  1mo ago
-  Part Time
-  Worldwide
-  <!-- Role -->
-  Frontend
-  <!-- Level -->
-  Junior
-  <!-- Languages -->
-  JavaScript
-  <!-- Tools -->
-  React
-  Sass
-  <!-- Item End -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <h4 class="job-posting__title">Junior Frontend Developer</h4>
+        <p class="job-posting__message">2 days ago • Part Time • USA only</p>
+      </div>
+      <ul class="job-posting__tags">
+        <li class="job-posting__item">Frontend</li>
+        <li class="job-posting__item">Junior</li>
+        <li class="job-posting__item">React</li>
+        <li class="job-posting__item">SASS</li>
+        <li class="job-posting__item">JavaScript</li>
+      </ul>
+    </div>
+
   </div>
+
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.valentinacalabrese.com" target="_blank">Valentina Calabrese</a>.
+  </div> -->
+
 </body>
+
 </html>
