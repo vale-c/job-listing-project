@@ -19,8 +19,12 @@ body {
     border-left: 4px solid #5ba4a4;
     background-color: #fff;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+    html .container .job-posting:last-child,
+    body .container .job-posting:last-child {
+      margin-bottom: 2rem; }
     html .container .job-posting__logo-wrapper,
     body .container .job-posting__logo-wrapper {
+      margin-top: 0.5rem;
       flex-shrink: 0; }
     html .container .job-posting__logo,
     body .container .job-posting__logo {
@@ -56,15 +60,22 @@ body {
     html .container .job-posting__badge-green,
     body .container .job-posting__badge-green {
       color: white;
-      padding: 5px;
+      font-size: 14px;
+      margin-bottom: 22px;
+      padding: 4px;
       border-radius: 15px;
-      background-color: #5ba4a4; }
+      background-color: #5ba4a4;
+      text-transform: uppercase;
+      margin-right: 12px; }
     html .container .job-posting__badge-black,
     body .container .job-posting__badge-black {
       color: white;
-      padding: 4px 15px;
+      font-size: 14px;
+      margin-bottom: 22px;
+      padding: 4px;
       border-radius: 15px;
-      background-color: #333; }
+      background-color: #333;
+      text-transform: uppercase; }
     html .container .job-posting__tags,
     body .container .job-posting__tags {
       padding: 0;

@@ -36,7 +36,11 @@ body {
       background-color: #fff;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      &:last-child {
+        margin-bottom: 2rem;
+      }
       &__logo-wrapper {
+        margin-top: 0.5rem;
         flex-shrink: 0;
       }
       &__logo {
@@ -72,15 +76,22 @@ body {
       }
       &__badge-green {
         color: white;
-        padding: 5px;
+        font-size: 14px;
+        margin-bottom: 22px;
+        padding: 4px;
         border-radius: 15px;
         background-color: $primaryColor;
+        text-transform: uppercase;
+        margin-right: 12px;
       }
       &__badge-black {
         color: white;
-        padding: 4px 15px;
+        font-size: 14px;
+        margin-bottom: 22px;
+        padding: 4px;
         border-radius: 15px;
         background-color: #333;
+        text-transform: uppercase;
       }
       &__tags {
         padding: 0;
