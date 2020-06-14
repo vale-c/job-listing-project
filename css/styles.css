@@ -13,12 +13,28 @@ body {
   html .container .job-posting,
   body .container .job-posting {
     display: flex;
+    flex-shrink: 0;
     margin: 4rem 6rem -2rem 6rem;
     padding: 1.5rem;
     border-radius: 0.5rem;
-    border-left: 4px solid #5ba4a4;
     background-color: #fff;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+    html .container .job-posting:hover,
+    body .container .job-posting:hover {
+      border-left: 4px solid #5ba4a4; }
+    @media only screen and (max-width: 719px) {
+      html .container .job-posting,
+      body .container .job-posting {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 4rem;
+        padding-bottom: 2rem;
+        flex-direction: column; } }
+    @media only screen and (max-width: 719px) {
+      html .container .job-posting,
+      body .container .job-posting {
+        margin: 5rem 3rem;
+        padding: 0; } }
     html .container .job-posting:last-child,
     body .container .job-posting:last-child {
       margin-bottom: 2rem; }
@@ -26,6 +42,10 @@ body {
     body .container .job-posting__logo-wrapper {
       margin-top: 0.5rem;
       flex-shrink: 0; }
+      @media only screen and (max-width: 719px) {
+        html .container .job-posting__logo-wrapper,
+        body .container .job-posting__logo-wrapper {
+          margin-top: -4rem; } }
     html .container .job-posting__logo,
     body .container .job-posting__logo {
       height: 3rem;
@@ -40,18 +60,35 @@ body {
       padding: 0;
       color: #1a202c;
       font-size: 1.25rem; }
+      @media only screen and (max-width: 719px) {
+        html .container .job-posting__title,
+        body .container .job-posting__title {
+          font-size: 26px; } }
+      @media only screen and (max-width: 719px) {
+        html .container .job-posting__title,
+        body .container .job-posting__title {
+          font-size: 18px; } }
     html .container .job-posting__message,
     body .container .job-posting__message {
       margin-top: -15px;
       margin-left: 22px;
       color: #718096;
       font-size: 1rem; }
+      @media only screen and (max-width: 719px) {
+        html .container .job-posting__message,
+        body .container .job-posting__message {
+          font-size: 18px; } }
     html .container .job-posting__badges,
     body .container .job-posting__badges {
       display: flex;
       margin-left: 1.5rem;
       height: 60px;
       margin-top: -10px; }
+      @media only screen and (max-width: 719px) {
+        html .container .job-posting__badges,
+        body .container .job-posting__badges {
+          font-size: 14px;
+          margin-bottom: 5px; } }
     html .container .job-posting__company-title,
     body .container .job-posting__company-title {
       margin-right: 1rem;
@@ -79,13 +116,21 @@ body {
     html .container .job-posting__tags,
     body .container .job-posting__tags {
       padding: 0;
-      margin-bottom: 3.5rem;
-      margin-left: 5rem;
+      margin-left: 6rem;
+      margin-bottom: 2rem;
       list-style: none;
       display: flex;
-      justify-content: space-between;
+      justify-content: end;
       align-items: flex-end;
       flex-wrap: wrap; }
+      @media only screen and (max-width: 719px) {
+        html .container .job-posting__tags,
+        body .container .job-posting__tags {
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          font-size: 16px;
+          margin: 1rem; } }
     html .container .job-posting__item,
     body .container .job-posting__item {
       background: #eef6f6;
@@ -94,3 +139,7 @@ body {
       color: #5ba4a4;
       font-weight: bold;
       text-align: center; }
+      @media only screen and (max-width: 719px) {
+        html .container .job-posting__item,
+        body .container .job-posting__item {
+          margin-top: -20px; } }

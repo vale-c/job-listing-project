@@ -7,6 +7,29 @@ $light-grayish-cyan: hsl(180, 31%, 95%); //(Filter Tablets)
 $dark-grayish-cyan: hsl(180, 8%, 52%);
 $very-dark-grayish-cyan: hsl(180, 14%, 20%);
 
+$desktop: 1440px; // PC screen size.
+$tablet: 720px; // Tablet screen size.
+$phone: 375px; // Phone screen size.
+
+@mixin responsive($media) {
+  @if $media = phone {
+    @media only screen and (max-width: $tablet - 1) {
+      @content;
+    }
+  } @else if $media = tablet {
+    @media only screen and (min-width: $tablet - 1) and (max-width: $pc) {
+      @content;
+    }
+  } @else if $media = desktop {
+    @media only screen and (min-width: $pc + 1) and (min-width: $pc) {
+      @content;
+    }
+  } @else if $media = desktop_tablet {
+    @media only screen and (min-width: $tablet - 1) {
+      @content;
+    }
+  }
+}
 //Font-family
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
@@ -29,19 +52,36 @@ body {
     }
     .job-posting {
       display: flex;
+      flex-shrink: 0;
       margin: 4rem 6rem -2rem 6rem;
       padding: 1.5rem;
       border-radius: 0.5rem;
-      border-left: 4px solid $primaryColor;
       background-color: #fff;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      &:hover {
+        border-left: 4px solid $primaryColor;
+      }
+      @include responsive(phone) {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 4rem;
+        padding-bottom: 2rem;
+        flex-direction: column;
+      }
+      @include responsive(tablet) {
+        margin: 5rem 3rem;
+        padding: 0;
+      }
       &:last-child {
         margin-bottom: 2rem;
       }
       &__logo-wrapper {
         margin-top: 0.5rem;
         flex-shrink: 0;
+        @include responsive(phone) {
+          margin-top: -4rem;
+        }
       }
       &__logo {
         height: 3rem;
@@ -56,18 +96,31 @@ body {
         padding: 0;
         color: #1a202c;
         font-size: 1.25rem;
+        @include responsive(phone) {
+          font-size: 26px;
+        }
+        @include responsive(tablet) {
+          font-size: 18px;
+        }
       }
       &__message {
         margin-top: -15px;
         margin-left: 22px;
         color: #718096;
         font-size: 1rem;
+        @include responsive(phone) {
+          font-size: 18px;
+        }
       }
       &__badges {
         display: flex;
         margin-left: 1.5rem;
         height: 60px;
         margin-top: -10px;
+        @include responsive(phone) {
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
       }
       &__company-title {
         margin-right: 1rem;
@@ -95,13 +148,20 @@ body {
       }
       &__tags {
         padding: 0;
-        margin-bottom: 3.5rem;
-        margin-left: 5rem;
+        margin-left: 6rem;
+        margin-bottom: 2rem;
         list-style: none;
         display: flex;
-        justify-content: space-between;
+        justify-content: end;
         align-items: flex-end;
         flex-wrap: wrap;
+        @include responsive(phone) {
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          font-size: 16px;
+          margin: 1rem;
+        }
       }
       &__item {
         background: $light-grayish-cyan;
@@ -110,6 +170,9 @@ body {
         color: $primaryColor;
         font-weight: bold;
         text-align: center;
+        @include responsive(phone) {
+          margin-top: -20px;
+        }
       }
     }
   }
