@@ -4,6 +4,7 @@
   "description": "![Design preview for the Job Listings coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
+    "build": "node-sass --include-path scss scss/styles.scss css/styles.css",
     "scss": "node-sass --watch scss -o css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
